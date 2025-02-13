@@ -1,6 +1,6 @@
-#Lab 04
+# Lab 04: *Jack Strikes Back*
 
-###Encapsulation
+### Encapsulation
 
 *Encapsulation* greatly reduced complexity of this project.
 Writing all of the components together would have been a jumbled mess,
@@ -9,7 +9,7 @@ much easier with this approach. We can test each function as we write it,
 and we know the errors associated with that function are isolated to 
 either the function or the function call.
 
-###Generalization
+### Generalization
 
 *Generalization* made the functions much more usable. With this 
 approach the jack-o'-lanterns and their components scale in size making 
