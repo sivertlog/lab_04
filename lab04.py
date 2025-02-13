@@ -1,7 +1,6 @@
 import turtle
 import random
 
-"""PUT YOUR FUNCTIONS HERE"""
 def draw_square(t, length):
     """Draws a square with the given side length."""
     for _ in range(4):
@@ -20,6 +19,7 @@ def draw_polygon(t, sides, length):
         t.left(angle)
 
 def jump(t,x,y):
+    """Moves turtle to x,y position without drawing"""
     t.penup()
     t.goto(x, y)
     t.pendown()
@@ -70,6 +70,7 @@ def draw_mouth(t, x, y, width):
     t.left(60)
 
 def draw_jack(t,x,y,radius):
+    """Puts all the pieces together to draw a Jack-o'-lantern."""
     draw_pumpkin(t, x, y, radius)
     eye_height=y+(.55*2*radius)
     eye_size=radius/4
@@ -79,7 +80,7 @@ def draw_jack(t,x,y,radius):
     draw_mouth(t, x-.45*radius, mouth_height, radius)  # Mouth
 
 
-def draw_star(t, x, y, size):
+def draw_star(t:turtle.Turtle, x, y, size):
     """Draws a star at the given (x, y) position."""
     t.penup()
     t.goto(x, y)
@@ -100,7 +101,7 @@ def draw_sky(t, num_stars):
         draw_star(t, x, y, size)
 
 
-
+"""Set up turtle and canvas"""
 # Create a turtle object
 t = turtle.Turtle()
 
@@ -117,7 +118,7 @@ screen.setup(width=600, height=600)
 # Clear the screen
 t.clear()
 
-"""PUT YOUR DRAW CALLS TO FUNCTIONS HERE"""
+"""Draw to the canvas"""
 
 #draw_square(t, 100)
 #draw_circle(t, 50)
